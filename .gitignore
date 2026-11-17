@@ -1,0 +1,68 @@
+# ---------- Dependencies ----------
+node_modules/
+.pnp
+.pnp.js
+
+# ---------- Build output ----------
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.vite/
+
+# ---------- Test / report output ----------
+reports/
+test-results/
+playwright-report/
+junit*.xml
+.scannerwork/
+trivy-*.json
+trivy-*.sarif
+
+# ---------- Environment & secrets (NEVER commit) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+*.kubeconfig
+kubeconfig*
+secrets/
+*-secret.yaml
+!k8s/**/*external-secret*.yaml
+
+# ---------- Terraform ----------
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# ---------- Logs ----------
+logs/
+*.log
+npm-debug.log*
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp

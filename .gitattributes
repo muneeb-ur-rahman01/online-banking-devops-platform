@@ -1,0 +1,24 @@
+# Normalise all text files to LF in the repository.
+# This matters on Windows: shell scripts and Dockerfiles with CRLF line
+# endings break inside Linux containers ("/bin/sh^M: bad interpreter").
+* text=auto eol=lf
+
+*.sh        text eol=lf
+Dockerfile  text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+Jenkinsfile text eol=lf
+*.groovy    text eol=lf
+*.tf        text eol=lf
+*.sql       text eol=lf
+
+# Windows-only scripts keep CRLF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff2 binary
